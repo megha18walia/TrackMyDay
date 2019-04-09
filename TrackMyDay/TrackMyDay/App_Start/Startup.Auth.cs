@@ -59,11 +59,11 @@ namespace TrackMyDay
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "346667846306-6j4i4f0l667gouf7397nl4emeasi5710.apps.googleusercontent.com",
+                ClientSecret = "cwjSt7sVZgGGBPvPl3WAmnGk"
+            });
         }
     }
 }
