@@ -75,6 +75,7 @@ namespace TrackMyDay.Providers
         {
             if (context.ClientId == _publicClientId)
             {
+                // Uri expectedRootUri = new Uri(context.Request.Uri, "/Login.html");
                 Uri expectedRootUri = new Uri(context.Request.Uri, "/Login.html");
 
                 if (expectedRootUri.AbsoluteUri == context.RedirectUri)

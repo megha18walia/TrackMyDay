@@ -2,6 +2,7 @@
     getAccessToken();
     $("#btnGoogleLogin").click(function () {
         window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A51057%2FLogin.html&state=3ZkQapfxTYdwqoqN2dUCW2eKiVBDVjLSQefFvcws7yU1";
+       // window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A51057%2F&state=3ZkQapfxTYdwqoqN2dUCW2eKiVBDVjLSQefFvcws7yU1";
     })
 })
 
@@ -27,7 +28,17 @@ function IsUserRegistered(accessToken) {
             if (responsedata.HasRegistered) {
                 localStorage.setItem("accesstoken", accessToken);
                 localStorage.setItem("Username", responsedata.Email);
-                window.location.href = "Data.html";
+                $.ajax({
+                    url: "/api/values",
+                    method: "Get",
+                    headers: {
+                        'content-type': "application/JSON",
+                        'Authorization': "Bearer " + accessToken
+                    },
+                    success: function (responsedata) {
+                        alert(responsedata);
+                    }
+                })
             }
             else {
                 RegisterExternalUser(accessToken);
@@ -46,6 +57,7 @@ function RegisterExternalUser(accessToken) {
         },
         success: function (responseData) {
             window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A51057%2FLogin.html&state=3ZkQapfxTYdwqoqN2dUCW2eKiVBDVjLSQefFvcws7yU1";
+           
         }
 
     })
