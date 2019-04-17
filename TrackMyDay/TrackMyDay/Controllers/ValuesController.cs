@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TrackMyDay.Models;
 
 namespace TrackMyDay.Controllers
 {
@@ -13,6 +14,7 @@ namespace TrackMyDay.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+            TrackMyDayContext  ctx = new TrackMyDayContext();
             return new string[] { "value1", "value2" };
         }
 
