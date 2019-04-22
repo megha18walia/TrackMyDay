@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div id="Return"></div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = $(location).attr("href");
+            var userId = url.split('=')[1].split("#")[0];
+
+            localStorage.setItem("UserId", userId);
+            $("#Return").html("<h1>Logged In Successfully : " + userId + "</h1>")
+
+        })
+
+    </script>
+
+</body>
+</html>

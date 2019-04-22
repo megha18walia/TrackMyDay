@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <input type="button" value="Login" id="Login" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Login").click(function () {
+                window.location.href = "Account/ExternalLogin?returnUrl=%2F&provider=Google";
+                //$.ajax({
+                //     method: "Get",
+                //    url: "Account/ExternalLogin?returnUrl=%2F&provider=Google",
+                    
+                //    success: function (responseData) {
+                //        alert("ABC");
+                //        // window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A51057%2FLogin.html&state=3ZkQapfxTYdwqoqN2dUCW2eKiVBDVjLSQefFvcws7yU1";
+                //    }
+                //})
+    })
+})
+    </script>
+</body>
+
+</html>
