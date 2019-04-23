@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using IdentityDemo.Models;
-using IdentityDemo.Models.AccountViewModels;
+using TrackMyDay.Models;
+using TrackMyDay.Models.AccountViewModels;
 
 
-namespace IdentityDemo.Controllers
+namespace TrackMyDay.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

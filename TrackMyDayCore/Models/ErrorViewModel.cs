@@ -1,6 +1,6 @@
 using System;
 
-namespace IdentityDemo.Models
+namespace TrackMyDay.Models
 {
     public class ErrorViewModel
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace IdentityDemo.Models.ManageViewModels
+namespace TrackMyDay.Models.ManageViewModels
 {
     public class ExternalLoginsViewModel
     {

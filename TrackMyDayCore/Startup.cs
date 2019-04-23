@@ -1,5 +1,5 @@
-﻿using IdentityDemo.Data;
-using IdentityDemo.Models;
+﻿using TrackMyDay.Data;
+using TrackMyDay.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -7,8 +7,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using TrackMyDay.Models;
 
-namespace IdentityDemo
+
+namespace TrackMyDay
 {
     public class Startup
     {
@@ -22,8 +24,8 @@ namespace IdentityDemo
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<TrackMyDayContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("TrackMyDayCoreConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

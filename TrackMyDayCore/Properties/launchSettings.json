@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "IdentityDemo": {
+    "TrackMyDay": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

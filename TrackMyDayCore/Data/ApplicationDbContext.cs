@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using IdentityDemo.Models;
+using TrackMyDay.Models;
 
-namespace IdentityDemo.Data
+namespace TrackMyDay.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

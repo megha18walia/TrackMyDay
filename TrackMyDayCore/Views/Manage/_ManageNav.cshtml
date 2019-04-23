@@ -1,4 +1,4 @@
-﻿@using IdentityDemo.Views.Manage
+﻿@using TrackMyDay.Views.Manage
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

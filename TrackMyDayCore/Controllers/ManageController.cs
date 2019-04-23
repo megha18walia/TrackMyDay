@@ -10,10 +10,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using IdentityDemo.Models;
-using IdentityDemo.Models.ManageViewModels;
+using TrackMyDay.Models;
+using TrackMyDay.Models.ManageViewModels;
 
-namespace IdentityDemo.Controllers
+namespace TrackMyDay.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
@@ -516,7 +516,7 @@ namespace IdentityDemo.Controllers
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("IdentityDemo"),
+                _urlEncoder.Encode("TrackMyDay"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }
