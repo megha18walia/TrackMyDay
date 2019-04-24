@@ -19,18 +19,20 @@ namespace TrackMyDay.Models
             //  Database.SetInitializer<TrackMyDayContext>(new CreateDatabaseIfNotExists<TrackMyDayContext>());
            
         }
-        public DbSet<AspNetUsers> AspNetUserss { get; set; }
-        public DbSet<TaskInfo> TaskInfos { get; set; }
+        public DbSet<AspNetUsers> AspNetUser { get; set; }
+        public DbSet<TaskInfo> TaskInfo { get; set; }
 
-        public DbSet<Reminder> Reminders { get; set; }
+        public DbSet<Reminder> Reminder { get; set; }
 
-        public DbSet<ReminderInfo> ReminderInfos { get; set; }
+        public DbSet<ReminderInfo> ReminderInfo { get; set; }
 
-        public DbSet<TaskAssignmentInfo> TaskAssignmentInfos { get; set; }
+        public DbSet<TaskAssignmentInfo> TaskAssignmentInfo { get; set; }
 
-        public DbSet<SnoozeInfo> SnoozeInfos { get; set; }
+        public DbSet<SnoozeInfo> SnoozeInfo { get; set; }
 
-        public DbSet<ReminderInfoHistory> ReminderInfoHistories { get; set; }
+        public DbSet<ReminderInfoHistory> ReminderInfoHistorie { get; set; }
+
+       
 
        
 

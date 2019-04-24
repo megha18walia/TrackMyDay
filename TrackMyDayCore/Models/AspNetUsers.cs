@@ -12,7 +12,7 @@ namespace TrackMyDay.Models
     public class AspNetUsers
     {
         [Key]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string Id { get; set; }
         [MaxLength(256)]
         public string Email { get; set; }

@@ -1,4 +1,4 @@
-﻿using TrackMyDay.Data;
+﻿
 using TrackMyDay.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,7 +28,7 @@ namespace TrackMyDay
                 options.UseSqlServer(Configuration.GetConnectionString("TrackMyDayCoreConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<TrackMyDayContext>()
                 .AddDefaultTokenProviders();
 
             services.AddAuthentication().AddGoogle(googleOptions =>

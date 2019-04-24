@@ -17,6 +17,7 @@ namespace TrackMyDay.Models
         public Guid  TaskId { get; set; }
 
         [ForeignKey("AspNetUsers")]
+        [MaxLength(450)]
         public string AssignedTo { get; set; }
 
         public string EmailId { get; set; }

@@ -19,6 +19,7 @@ namespace TrackMyDay.Models
         public string TaskDescription { get; set; }
 
         [ForeignKey("AspNetUsers")]
+        [MaxLength(450)]
         public string CreatedBy { get; set; }
 
         public virtual AspNetUsers AspNetUsers { get; set; }
